@@ -1,0 +1,7 @@
+{
+	"name": "Self-Hosted-Integration-Runtime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "used to connect SQL Server"
+	}
+}
