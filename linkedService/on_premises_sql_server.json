@@ -1,16 +1,23 @@
 {
 	"name": "on_premises_sql_server",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=LAPTOP-4KJLGQ8E;initial catalog=AdventureWorksLT2017;user id=mrk",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNjM0NTExZC1iN2Q1LTRkNzktYjcxOS1mOGU0MzYwMTdlMDYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "Integrated Security=False;Data Source=LAPTOP-4KJLGQ8E;Initial Catalog=AdventureWorksLT2017;User ID=mrk",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password"
+			}
 		},
 		"connectVia": {
 			"referenceName": "Self-Hosted-Integration-Runtime",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
