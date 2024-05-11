@@ -1,0 +1,12 @@
+{
+	"name": "SalesLT_address",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sql_on_premises",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
