@@ -1,0 +1,47 @@
+{
+	"name": "Copy_full_schema",
+	"properties": {
+		"activities": [
+			{
+				"name": "Look for all tables",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "Select\ns.name as SchemaName,\nt.name as TableName\nfrom sys.tables t\nInner join sys.schemas s\non t.schema_id = s.schema_id\nwhere s.name = 'SalesLT'",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "sqlDBTables",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "ForEachSchemaTable",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Look for all tables",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
+			}
+		],
+		"annotations": []
+	}
+}
