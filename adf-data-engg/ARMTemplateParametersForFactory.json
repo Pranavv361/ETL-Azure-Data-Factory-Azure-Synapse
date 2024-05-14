@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-data-engg"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"on_premises_sql_server_connectionString": {
+			"value": "Integrated Security=False;Data Source=LAPTOP-4KJLGQ8E;Initial Catalog=AdventureWorksLT2017;User ID=mrk"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storeaccount361.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://keyv-dataengg.vault.azure.net/"
+		}
+	}
+}
