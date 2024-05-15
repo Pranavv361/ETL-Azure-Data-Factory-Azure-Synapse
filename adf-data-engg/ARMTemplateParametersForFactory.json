@@ -16,6 +16,9 @@
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://keyv-dataengg.vault.azure.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0514-045553-xlb74mhr"
 		}
 	}
 }
