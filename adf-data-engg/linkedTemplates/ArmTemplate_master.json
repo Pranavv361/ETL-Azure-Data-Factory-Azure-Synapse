@@ -20,13 +20,13 @@
 			"type": "string",
 			"defaultValue": "https://storeaccount361.dfs.core.windows.net/"
 		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://keyv-dataengg.vault.azure.net/"
-		},
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 			"type": "string",
 			"defaultValue": "0514-045553-xlb74mhr"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://keyv-dataengg.vault.azure.net/"
 		},
 		"containerUri": {
 			"type": "string",
