@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapseeworkspacee"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"ServerlessSQLdb_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=synapseeworkspacee-ondemand.sql.azuresynapse.net;Initial Catalog=gold_db"
+		},
+		"on_premises_sql_server_connectionString": {
+			"value": "Integrated Security=False;Data Source=LAPTOP-4KJLGQ8E;Initial Catalog=AdventureWorksLT2017;User ID=mrk"
+		},
+		"synapseeworkspacee-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapseeworkspacee.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storeaccount361.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://keyv-dataengg.vault.azure.net/"
+		},
+		"synapseeworkspacee-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://storeaccount361.dfs.core.windows.net"
+		}
+	}
+}
