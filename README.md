@@ -62,5 +62,3 @@ To follow along with this project, you will need:
 - Access to an on-premises SQL Server database.
 - Basic knowledge of Azure services mentioned above.
 
-For more details: Youtube [Link](https://www.youtube.com/watch?v=mECDWTYiKp4&list=PLrG_BXEk3kXx6KE4nBmhf6QwSHMbznP2W&index=1)
-
